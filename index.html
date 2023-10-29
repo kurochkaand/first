@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BioPhysics</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">BioPhysics tools</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarsExample04"
+          aria-controls="navbarsExample04"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample04">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="Table.html">Amino acids</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="page2.html">MD tools</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="MW_calculator.html">Molecular mass</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="index.html#feedback_1">Feedback</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false"
+                >Calculators</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="dropdown04">
+                <li><a class="dropdown-item" target="_blank" href="index.html">Beer-Lambert calculator</a></li>
+                <li><a class="dropdown-item" target="_blank" href="index.html#second_half">Concentration calculator</a></li>
+                <li><a class="dropdown-item" target="_blank" href="page2.html">Water molecules</a></li>
+                <li><a class="dropdown-item" target="_blank" href="MW_calculator.html">Molecular mass</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form>
+            <input class="form-control" type="text" placeholder="Search not implemented" aria-label="Search" />
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Beer-Lambert calculator -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12"><h2>Beer-Lambert calculator</h2></div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-8 col-md-4"><h5>Absorption</h5></div>
+        <div class="col-8 col-md-4">
+          <input id="ab" value="0." class="form-control" />
+        </div>
+        <div class="col-8 col-md-3">
+          <select class="form-select" disabled>
+            <option>AU</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8 col-md-4"><h5>Extinction coeficient</h5></div>
+        <div class="col-8 col-md-4">
+          <input id="ec" class="form-control" />
+        </div>
+        <div class="col-8 col-md-3">
+          <select class="form-select" disabled>
+            <option>M⁻¹⋅cm⁻¹</option>
+          </select>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-8 col-md-4"><h5>Path length</h5></div>
+        <div class="col-8 col-md-4">
+          <input id="pl" value="1" class="form-control" />
+        </div>
+        <div class="col-8 col-md-3">
+          <select class="form-select" disabled>
+            <option>cm</option>
+          </select>
+        </div>
+      </div>
+      <div class="row gy-1 align-items-center">
+        <div class="col-md-2"><h5>Concentration</h5></div>
+        <div class="col-4 col-md-2 text-center">
+          <button id="conc" class="btn btn-success">Calculate</button>
+        </div>
+
+        <div class="col-8 col-md-4">
+          <div id="result1" class="box"></div>
+        </div>
+        <div class="col-9 col-md-2">
+          <select id="c1_unit" class="form-select">
+            <option>nM</option>
+            <option selected="selected">μM</option>
+            <option>mM</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-1 text-center">
+          <button id="reset1" class="btn btn-danger">Reset</button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <!-- Concentration calculator -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12"><h2 id="second_half">Concentration calculator</h2></div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-8 col-md-4"><h5>Mass</h5></div>
+        <div class="col-8 col-md-4">
+          <input type="number" id="mass" class="form-control" />
+        </div>
+        <div class="col-8 col-md-3">
+          <select id="m_unit" class="form-select">
+            <option selected="selected">mg</option>
+            <option>g</option>
+            <option>kg</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8 col-md-4"><h5>Volume</h5></div>
+        <div class="col-8 col-md-4">
+          <input type="number" id="vol" class="form-control" />
+        </div>
+        <div class="col-8 col-md-3">
+          <select id="v_unit" class="form-select">
+            <option>μL</option>
+            <option selected="selected">mL</option>
+            <option>L</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8 col-md-4"><h5>Molecular weight</h5></div>
+        <div class="col-8 col-md-4">
+          <input type="number" id="mw" class="form-control" />
+        </div>
+        <div class="col-8 col-md-3">
+          <select id="mw_unit" class="form-select">
+            <option selected="selected">Da</option>
+            <option>kDa</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <label class="col-8 col-md-4"><h5>Precision</h5></label>
+        <div class="col-8 col-md-4">
+          <input type="range" id="prec_2" min="0" max="10" step="1" value="3" class="form-range" />
+        </div>
+      </div>
+      <div class="row gy-1 align-items-center">
+        <div class="col-md-2"><h5>Concentration</h5></div>
+        <div class="col-4 col-md-2 text-center">
+          <button id="calculate2" class="btn btn-success">Calculate</button>
+        </div>
+        <div class="col-8 col-md-4">
+          <div id="result2" class="box"></div>
+        </div>
+        <div class="col-9 col-md-2">
+          <select id="c2_unit" class="form-select">
+            <option>nM</option>
+            <option>μM</option>
+            <option selected="selected">mM</option>
+            <option>M</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-1 text-center">
+          <button id="reset2" class="btn btn-danger">Reset</button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <hr />
+    <!-- Feedback form -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12"><h4 id="feedback_1">How did you like our calculators?</h4></div>
+      </div>
+      <div class="row">
+        <form class="form-check form-switch">
+          <div class="col">
+            <input type="radio" name="stars" id="one" class="form-check-input" />
+            <label class="form-check-label"><b>✩</b></label>
+          </div>
+          <div class="col">
+            <input type="radio" name="stars" id="three" class="form-check-input" />
+            <label class="form-check-label"><b>✩✩✩</b></label>
+          </div>
+          <div class="col">
+            <input type="radio" name="stars" id="five" class="form-check-input" />
+            <label class="form-check-label"><b>✩✩✩✩✩</b></label>
+          </div>
+          <div class="col">
+            <button id="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
