@@ -1,12 +1,12 @@
 body {
-  background-color: azure;
+  background-color: rgb(118, 227, 227);
 }
 
 /* This box class is purely used for explaining how the bootstrap grid system works. */
 .box {
   background-color: rgb(255, 255, 255);
-  border-radius: 10px;
-  border: 1px solid blue;
+  border-radius: 9px;
+  border: 2px solid blue;
   min-height: 40px;
   font-size: 1rem;
 }
