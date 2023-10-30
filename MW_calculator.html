@@ -2,14 +2,17 @@
 <html lang="en">
   <head>
     <title>MW calculator</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
+    <nav
+      class="navbar navbar-expand-md navbar-dark bg-dark"
+      aria-label="Fourth navbar example"
+    >
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">BioPhysics tools</a>
         <button
@@ -27,31 +30,69 @@
         <div class="collapse navbar-collapse" id="navbarsExample04">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="Table.html">Amino acids</a>
+              <a class="nav-link" target="_blank" href="Table.html"
+                >Amino acids</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" target="_blank" href="page2.html">MD tools</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="MW_calculator.html">Molecular mass</a>
+              <a class="nav-link" target="_blank" href="MW_calculator.html"
+                >Molecular mass</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="index.html#feedback_1">Feedback</a>
+              <a class="nav-link" target="_blank" href="index.html#feedback_1"
+                >Feedback</a
+              >
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false"
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdown04"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
                 >Calculators</a
               >
               <ul class="dropdown-menu" aria-labelledby="dropdown04">
-                <li><a class="dropdown-item" target="_blank" href="index.html">Beer-Lambert calculator</a></li>
-                <li><a class="dropdown-item" target="_blank" href="index.html#second_half">Concentration calculator</a></li>
-                <li><a class="dropdown-item" target="_blank" href="page2.html">Water molecules</a></li>
-                <li><a class="dropdown-item" target="_blank" href="MW_calculator.html">Molecular mass</a></li>
+                <li>
+                  <a class="dropdown-item" target="_blank" href="index.html"
+                    >Beer-Lambert calculator</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    target="_blank"
+                    href="index.html#second_half"
+                    >Concentration calculator</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" target="_blank" href="page2.html"
+                    >Water molecules</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    target="_blank"
+                    href="MW_calculator.html"
+                    >Molecular mass</a
+                  >
+                </li>
               </ul>
             </li>
           </ul>
           <form>
-            <input class="form-control" type="text" placeholder="Search not implemented" aria-label="Search" />
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Search not implemented"
+              aria-label="Search"
+            />
           </form>
         </div>
       </div>
@@ -61,10 +102,14 @@
       <h1 style="text-align: center">Molecular weight calculator</h1>
       <hr />
       <p>
-        This tool will help you to find a combined molecular weight (mass) of any inorganic or organic molecule by brutto formula
-        (e.g. Na<sub>2</sub>SO<sub>4</sub>)
+        This tool will help you to find a combined molecular weight (mass) of
+        any inorganic or organic molecule by brutto formula (e.g.
+        Na<sub>2</sub>SO<sub>4</sub>)
       </p>
-      <p>It supports large formulas (e.g. C360H563N48O586) as well as one set of brackets (e.g. Al2(SO4)3)</p>
+      <p>
+        It supports large formulas (e.g. C360H563N48O586) as well as one set of
+        brackets (e.g. Al2(SO4)3)
+      </p>
 
       <hr />
       <div>
@@ -75,8 +120,121 @@
 
       <div id="result" style="border: 2px solid black; height: 30px"></div>
       <hr />
-      <img src="Periodic table.png" alt="Periodic table" width="600" />
     </div>
+    <div class="container">
+      <img src="Periodic table.png" alt="Periodic table" width="600" />
+      <hr />
+      <div class="textContainer"></div>
+      <div class="keyboard">
+        <div class="row">
+          <div class="element">H</div>
+          <div class="element">He</div>
+        </div>
+        <div class="row">
+          <div class="element">Li</div>
+          <div class="element">Be</div>
+          <div class="element">B</div>
+          <div class="element">C</div>
+          <div class="element">N</div>
+          <div class="element">O</div>
+          <div class="element">F</div>
+          <div class="element">Ne</div>
+        </div>
+        <div class="row">
+          <div class="element">Na</div>
+          <div class="element">Mg</div>
+          <div class="element">Al</div>
+          <div class="element">Si</div>
+          <div class="element">P</div>
+          <div class="element">S</div>
+          <div class="element">Cl</div>
+          <div class="element">Ar</div>
+        </div>
+        <div class="row">
+          <div class="element">K</div>
+          <div class="element">Ca</div>
+          <div class="element">Sc</div>
+          <div class="element">Ti</div>
+          <div class="element">V</div>
+          <div class="element">Cr</div>
+          <div class="element">Mn</div>
+          <div class="element">Fe</div>
+          <div class="element">Co</div>
+          <div class="element">Ni</div>
+          <div class="element">Cu</div>
+          <div class="element">Zn</div>
+          <div class="element">Ga</div>
+          <div class="element">Ge</div>
+          <div class="element">As</div>
+          <div class="element">Se</div>
+          <div class="element">Br</div>
+          <div class="element">Kr</div>
+        </div>
+        <div class="row">
+          <div class="element">Rb</div>
+          <div class="element">Sr</div>
+          <div class="element">Y</div>
+          <div class="element">Zr</div>
+          <div class="element">Nb</div>
+          <div class="element">Mo</div>
+          <div class="element">Tc</div>
+          <div class="element">Ru</div>
+          <div class="element">Rh</div>
+          <div class="element">Pd</div>
+          <div class="element">Ag</div>
+          <div class="element">Cd</div>
+          <div class="element">In</div>
+          <div class="element">Sn</div>
+          <div class="element">Sb</div>
+          <div class="element">Te</div>
+          <div class="element">I</div>
+          <div class="element">Xe</div>
+        </div>
+        <div class="element">Cs</div>
+        <div class="element">Ba</div>
+        <div class="element">Lu</div>
+        <div class="element">Hf</div>
+        <div class="element">Ta</div>
+        <div class="element">W</div>
+        <div class="element">Re</div>
+        <div class="element">Os</div>
+        <div class="element">Ir</div>
+        <div class="element">Pt</div>
+        <div class="element">Au</div>
+        <div class="element">Hg</div>
+        <div class="element">Tl</div>
+        <div class="element">Pb</div>
+        <div class="element">Bi</div>
+        <div class="element">Po</div>
+
+        <div class="row">
+          <div class="element">La</div>
+          <div class="element">Ce</div>
+          <div class="element">Pr</div>
+          <div class="element">Nd</div>
+          <div class="element">Pm</div>
+          <div class="element">Sm</div>
+          <div class="element">Eu</div>
+          <div class="element">Gd</div>
+          <div class="element">Tb</div>
+          <div class="element">Dy</div>
+          <div class="element">Ho</div>
+          <div class="element">Er</div>
+          <div class="element">Tm</div>
+          <div class="element">Yb</div>
+        </div>
+        <div class="row">
+          <div class="element">Pa</div>
+          <div class="element">U</div>
+          <div class="element">Np</div>
+          <div class="element">Pu</div>
+          <div class="element">Am</div>
+          <div class="element">Cm</div>
+          <div class="element">Bk</div>
+        </div>
+      </div>
+    </div>
+
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="MW_calcul.js"></script>
   </body>
