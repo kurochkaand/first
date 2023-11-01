@@ -85,15 +85,14 @@ document.getElementById("reset2").onclick = function (event) {
 
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
-  if (!form.checkValidity()) {
-    e.preventDefault();
-  } else {
-    e.preventDefault();
-  }
+  e.preventDefault();
+  form.checkValidity()
   form.classList.add("was-validated");
 });
 
 //Responce to the feedback button
-document.getElementById("submit").onclick = function (event) {
-  window.alert("Thank you!");
+document.getElementById("feedbackForm").onsubmit = function (event) {
+  // event.preventDefault();
+  // window.alert("Thank you!");
+  // document.getElementById("feedbackForm").innerHTML = ''
 };
