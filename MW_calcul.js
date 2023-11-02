@@ -119,10 +119,10 @@ function recognizer(formula) {
   let a = 0; // coma counter
   for (let i = 1; i < perm.length; i++) {
     if (!isNaN(parseInt(perm[i])) && !isNaN(parseInt(perm[i - 1]))) {
-      //it`s long number
+      //first and second are numbers (long number case)
       continue;
     } else if (perm[i] === perm[i].toUpperCase()) {
-      //it`s a Capital or a number
+      //second is capital or a number
       txt = txt.slice(0, i + a) + "," + txt.slice(i + a);
       a++;
     }
@@ -135,17 +135,26 @@ function recognizer(formula) {
 function mass_counter(arr) {
   let ele = "";
   let result = 0;
+  let fir_num = 1;
   for (let i = 0; i < arr.length; i++) {
     if (isNaN(parseInt(arr[i]))) {
       // is NOT a number
       ele = arr[i];
-      result += ptable[ele];
-    } else if (!isNaN(parseInt(arr[i]))) {
+      if (ptable.hasOwnProperty(ele)) {
+        result += ptable[ele];
+      } else {
+        document.getElementById("result").innerHTML = `unrecognized "${ele}" !`;
+        return 0;
+      }
+    } else if (!isNaN(parseInt(arr[i])) && i == 0) {
+      // first is a number
+      fir_num = arr[0];
+    } else {
       // is a number
       result += ptable[ele] * (parseInt(arr[i]) - 1);
     }
   }
-  return result;
+  return result * fir_num;
 }
 
 document.getElementById("sbm").onclick = function (event) {
@@ -164,6 +173,7 @@ document.getElementById("sbm").onclick = function (event) {
     g_result += insider * parseInt(tmp_a3[0]); //counted incide bracet*index
     g_result += mass_counter(tmp_a3.slice(1)); //counted after bracet omiting first index
   }
-
-  document.getElementById("result").innerHTML = g_result.toFixed(1);
+  if (!isNaN(g_result) && g_result > 0) {
+    document.getElementById("result").innerHTML = g_result.toFixed(1);
+  }
 };
