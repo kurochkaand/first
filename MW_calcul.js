@@ -112,7 +112,7 @@ var ptable = {
   Ts: 294.0,
   Og: 294.0,
 };
-
+// L2O+45gorn+Fea2Ge+Ca2(OH)=wi
 function recognizer(formula) {
   const perm = formula; //permanent
   let txt = formula; //changing
@@ -175,5 +175,7 @@ document.getElementById("sbm").onclick = function (event) {
   }
   if (!isNaN(g_result) && g_result > 0) {
     document.getElementById("result").innerHTML = g_result.toFixed(1);
+  } else {
+    document.getElementById("result").innerHTML = "Wrong input!";
   }
 };
