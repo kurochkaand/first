@@ -12,7 +12,7 @@ document.getElementById("conc").onclick = function (event) {
   } else if (c1_unit == "mM") {
     result1 *= 1e3;
   }
-  document.getElementById("result1").innerHTML = result1.toFixed(3);
+  document.getElementById("concentration1").value = result1.toFixed(3);
 };
 // Reset button of the first calculator
 document.getElementById("reset1").onclick = function (event) {
@@ -24,7 +24,7 @@ document.getElementById("reset1").onclick = function (event) {
   pl.value = pl.defaultValue;
   var c1_unit = document.getElementById("c1_unit");
   c1_unit.value = "μM";
-  document.getElementById("result1").innerHTML = null;
+  document.getElementById("concentration1").value = null;
 };
 // Calculate button of the second calculator
 document.getElementById("calculate2").onclick = function (event) {
@@ -86,7 +86,7 @@ document.getElementById("reset2").onclick = function (event) {
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  form.checkValidity()
+  form.checkValidity();
   form.classList.add("was-validated");
 });
 
