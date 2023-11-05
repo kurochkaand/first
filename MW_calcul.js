@@ -159,7 +159,7 @@ function mass_counter(arr) {
 
 document.getElementById("sbm").onclick = function (event) {
   let user_inp = document.getElementById("formula").value;
-  formula = user_inp;
+  formula = user_inp.trim();
 
   let g_result = 0; //Global result
   if (!formula.includes("(")) {

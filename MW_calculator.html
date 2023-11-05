@@ -9,10 +9,39 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <nav
-      class="navbar navbar-expand-md navbar-dark bg-dark"
-      aria-label="Fourth navbar example"
-    >
+    <style>
+      .ptable-container {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .element {
+        width: 40px;
+        height: 40px;
+        border: 1px black solid;
+        border-radius: 5px;
+        box-shadow: 0 0 0 1px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .empty {
+        width: 40px;
+        height: 40px;
+      }
+      .keyboard {
+        display: grid;
+        grid-template-columns: repeat(18, auto);
+        width: 720px;
+        margin: 0;
+      }
+      .f-ele {
+        display: grid;
+        grid-template-columns: repeat(14, auto);
+        width: 560px;
+        margin-left: 160px;
+        margin-top: 20px;
+      }
+    </style>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">BioPhysics tools</a>
         <button
@@ -30,71 +59,39 @@
         <div class="collapse navbar-collapse" id="navbarsExample04">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="Table.html"
-                >Amino acids</a
-              >
+              <a class="nav-link" target="_blank" href="Table.html">Amino acids</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="MD_tools.html"
-                >MD tools</a
-              >
+              <a class="nav-link" target="_blank" href="MD_tools.html">MD tools</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="MW_calculator.html"
-                >Molecular mass</a
-              >
+              <a class="nav-link" target="_blank" href="MW_calculator.html">Molecular mass</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="index.html#feedback_1"
-                >Feedback</a
-              >
+              <a class="nav-link" target="_blank" href="index.html#feedback_1">Feedback</a>
             </li>
             <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="dropdown04"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false"
                 >Calculators</a
               >
               <ul class="dropdown-menu" aria-labelledby="dropdown04">
                 <li>
-                  <a class="dropdown-item" target="_blank" href="index.html"
-                    >Beer-Lambert calculator</a
-                  >
+                  <a class="dropdown-item" target="_blank" href="index.html">Beer-Lambert calculator</a>
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item"
-                    target="_blank"
-                    href="index.html#second_half"
-                    >Concentration calculator</a
-                  >
+                  <a class="dropdown-item" target="_blank" href="index.html#second_half">Concentration calculator</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" target="_blank" href="MD_tools.html"
-                    >Water molecules</a
-                  >
+                  <a class="dropdown-item" target="_blank" href="MD_tools.html">Water molecules</a>
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item"
-                    target="_blank"
-                    href="MW_calculator.html"
-                    >Molecular mass</a
-                  >
+                  <a class="dropdown-item" target="_blank" href="MW_calculator.html">Molecular mass</a>
                 </li>
               </ul>
             </li>
           </ul>
           <form>
-            <input
-              class="form-control"
-              type="text"
-              placeholder="Search not implemented"
-              aria-label="Search"
-            />
+            <input class="form-control" type="text" placeholder="Search not implemented" aria-label="Search" />
           </form>
         </div>
       </div>
@@ -104,14 +101,10 @@
       <h1 style="text-align: center">Molecular weight calculator</h1>
       <hr />
       <p>
-        This tool will help you to find a combined molecular weight (mass) of
-        any inorganic or organic molecule by brutto formula (e.g.
-        Na<sub>2</sub>SO<sub>4</sub>)
+        This tool will help you to find a combined molecular weight (mass) of any inorganic or organic molecule by brutto formula
+        (e.g. Na<sub>2</sub>SO<sub>4</sub>)
       </p>
-      <p>
-        It supports large formulas (e.g. C360H563N48O586) as well as one set of
-        brackets (e.g. Al2(SO4)3)
-      </p>
+      <p>It supports large formulas (e.g. C360H563N48O586) as well as one set of brackets (e.g. Al2(SO4)3)</p>
 
       <hr />
       <div>
@@ -124,147 +117,171 @@
       <hr />
     </div>
     <div class="container">
-      <img src="Periodic table.png" alt="Periodic table" width="600" />
+      <!--      <img src="Periodic table.png" alt="Periodic table" width="600" />-->
       <hr />
-      <div class="textContainer"></div>
-      <!--     <div class="keyboard">
-        <div class="row">
-          <div class="element">H</div>
-          <div class="element">He</div>
+      <div class="ptable-container">
+        <div class="keyboard">
+          <div index="1" class="element">H</div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div index="2" class="element">He</div>
+
+          <div index="3" class="element">Li</div>
+          <div index="4" class="element">Be</div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div index="5" class="element">B</div>
+          <div index="6" class="element">C</div>
+          <div index="7" class="element">N</div>
+          <div index="8" class="element">O</div>
+          <div index="9" class="element">F</div>
+          <div index="10" class="element">Ne</div>
+
+          <div index="11" class="element">Na</div>
+          <div index="12" class="element">Mg</div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div index="13" class="element">Al</div>
+          <div index="14" class="element">Si</div>
+          <div index="15" class="element">P</div>
+          <div index="16" class="element">S</div>
+          <div index="17" class="element">Cl</div>
+          <div index="18" class="element">Ar</div>
+          <div index="19" class="element">K</div>
+          <div index="20" class="element">Ca</div>
+          <div index="21" class="element">Sc</div>
+          <div index="22" class="element">Ti</div>
+          <div index="23" class="element">V</div>
+          <div index="24" class="element">Cr</div>
+          <div index="25" class="element">Mn</div>
+          <div index="26" class="element">Fe</div>
+          <div index="27" class="element">Co</div>
+          <div index="28" class="element">Ni</div>
+          <div index="29" class="element">Cu</div>
+          <div index="30" class="element">Zn</div>
+          <div index="31" class="element">Ga</div>
+          <div index="32" class="element">Ge</div>
+          <div index="33" class="element">As</div>
+          <div index="34" class="element">Se</div>
+          <div index="35" class="element">Br</div>
+          <div index="36" class="element">Kr</div>
+          <div index="37" class="element">Rb</div>
+          <div index="38" class="element">Sr</div>
+          <div index="39" class="element">Y</div>
+          <div index="40" class="element">Zr</div>
+          <div index="41" class="element">Nb</div>
+          <div index="42" class="element">Mo</div>
+          <div index="43" class="element">Tc</div>
+          <div index="44" class="element">Ru</div>
+          <div index="45" class="element">Rh</div>
+          <div index="46" class="element">Pd</div>
+          <div index="47" class="element">Ag</div>
+          <div index="48" class="element">Cd</div>
+          <div index="49" class="element">In</div>
+          <div index="50" class="element">Sn</div>
+          <div index="51" class="element">Sb</div>
+          <div index="52" class="element">Te</div>
+          <div index="53" class="element">I</div>
+          <div index="54" class="element">Xe</div>
+          <div index="55" class="element">Cs</div>
+          <div index="56" class="element">Ba</div>
+          <div index="57" class="element">La</div>
+          <div index="72" class="element">Hf</div>
+          <div index="73" class="element">Ta</div>
+          <div index="74" class="element">W</div>
+          <div index="75" class="element">Re</div>
+          <div index="76" class="element">Os</div>
+          <div index="77" class="element">Ir</div>
+          <div index="78" class="element">Pt</div>
+          <div index="79" class="element">Au</div>
+          <div index="80" class="element">Hg</div>
+          <div index="81" class="element">Tl</div>
+          <div index="82" class="element">Pb</div>
+          <div index="83" class="element">Bi</div>
+          <div index="84" class="element">Po</div>
+          <div index="85" class="element">At</div>
+          <div index="86" class="element">Rn</div>
+          <div index="87" class="element">Fr</div>
+          <div index="88" class="element">Ra</div>
+          <div index="89" class="element">Ac</div>
+          <div index="104" class="element">Rf</div>
+          <div index="105" class="element">Db</div>
+          <div index="106" class="element">Sg</div>
+          <div index="107" class="element">Bh</div>
+          <div index="108" class="element">Hs</div>
+          <div index="109" class="element">Mt</div>
+          <div index="110" class="element">Ds</div>
+          <div index="111" class="element">Rg</div>
+          <div index="112" class="element">Cn</div>
+          <div index="113" class="element">Nh</div>
+          <div index="114" class="element">Fl</div>
+          <div index="115" class="element">Mc</div>
+          <div index="116" class="element">Lv</div>
+          <div index="117" class="element">Ts</div>
+          <div index="118" class="element">Og</div>
         </div>
-        <div class="row">
-          <div class="element">Li</div>
-          <div class="element">Be</div>
-          <div class="element">B</div>
-          <div class="element">C</div>
-          <div class="element">N</div>
-          <div class="element">O</div>
-          <div class="element">F</div>
-          <div class="element">Ne</div>
+        <div class="f-ele">
+          <div index="58" class="element">Ce</div>
+          <div index="59" class="element">Pr</div>
+          <div index="60" class="element">Nd</div>
+          <div index="61" class="element">Pm</div>
+          <div index="62" class="element">Sm</div>
+          <div index="63" class="element">Eu</div>
+          <div index="64" class="element">Gd</div>
+          <div index="65" class="element">Tb</div>
+          <div index="66" class="element">Dy</div>
+          <div index="67" class="element">Ho</div>
+          <div index="68" class="element">Er</div>
+          <div index="69" class="element">Tm</div>
+          <div index="70" class="element">Yb</div>
+          <div index="71" class="element">Lu</div>
+
+          <div index="90" class="element">Th</div>
+          <div index="91" class="element">Pa</div>
+          <div index="92" class="element">U</div>
+          <div index="93" class="element">Np</div>
+          <div index="94" class="element">Pu</div>
+          <div index="95" class="element">Am</div>
+          <div index="96" class="element">Cm</div>
+          <div index="97" class="element">Bk</div>
+          <div index="98" class="element">Cf</div>
+          <div index="99" class="element">Es</div>
+          <div index="100" class="element">Fm</div>
+          <div index="101" class="element">Md</div>
+          <div index="102" class="element">No</div>
+          <div index="103" class="element">Lr</div>
         </div>
-        <div class="row">
-          <div class="element">Na</div>
-          <div class="element">Mg</div>
-          <div class="element">Al</div>
-          <div class="element">Si</div>
-          <div class="element">P</div>
-          <div class="element">S</div>
-          <div class="element">Cl</div>
-          <div class="element">Ar</div>
-        </div>
-        <div class="row">
-          <div class="element">K</div>
-          <div class="element">Ca</div>
-          <div class="element">Sc</div>
-          <div class="element">Ti</div>
-          <div class="element">V</div>
-          <div class="element">Cr</div>
-          <div class="element">Mn</div>
-          <div class="element">Fe</div>
-          <div class="element">Co</div>
-          <div class="element">Ni</div>
-          <div class="element">Cu</div>
-          <div class="element">Zn</div>
-          <div class="element">Ga</div>
-          <div class="element">Ge</div>
-          <div class="element">As</div>
-          <div class="element">Se</div>
-          <div class="element">Br</div>
-          <div class="element">Kr</div>
-        </div>
-        <div class="row">
-          <div class="element">Rb</div>
-          <div class="element">Sr</div>
-          <div class="element">Y</div>
-          <div class="element">Zr</div>
-          <div class="element">Nb</div>
-          <div class="element">Mo</div>
-          <div class="element">Tc</div>
-          <div class="element">Ru</div>
-          <div class="element">Rh</div>
-          <div class="element">Pd</div>
-          <div class="element">Ag</div>
-          <div class="element">Cd</div>
-          <div class="element">In</div>
-          <div class="element">Sn</div>
-          <div class="element">Sb</div>
-          <div class="element">Te</div>
-          <div class="element">I</div>
-          <div class="element">Xe</div>
-        </div>
-        <div class="row">
-          <div class="element">Cs</div>
-          <div class="element">Ba</div>
-          <div class="element">La</div>
-          <div class="element">Hf</div>
-          <div class="element">Ta</div>
-          <div class="element">W</div>
-          <div class="element">Re</div>
-          <div class="element">Os</div>
-          <div class="element">Ir</div>
-          <div class="element">Pt</div>
-          <div class="element">Au</div>
-          <div class="element">Hg</div>
-          <div class="element">Tl</div>
-          <div class="element">Pb</div>
-          <div class="element">Bi</div>
-          <div class="element">Po</div>
-          <div class="element">At</div>
-          <div class="element">Rn</div>
-        </div>
-        <div class="row">
-          <div class="element">Fr</div>
-          <div class="element">Ra</div>
-          <div class="element">Ac</div>
-          <div class="element">Rf</div>
-          <div class="element">Db</div>
-          <div class="element">Sg</div>
-          <div class="element">Bh</div>
-          <div class="element">Hs</div>
-          <div class="element">Mt</div>
-          <div class="element">Ds</div>
-          <div class="element">Rg</div>
-          <div class="element">Cn</div>
-          <div class="element">Nh</div>
-          <div class="element">Fl</div>
-          <div class="element">Mc</div>
-          <div class="element">Lv</div>
-          <div class="element">Ts</div>
-          <div class="element">Og</div>
-        </div>
-        <div class="row">
-          <div class="element">Ce</div>
-          <div class="element">Pr</div>
-          <div class="element">Nd</div>
-          <div class="element">Pm</div>
-          <div class="element">Sm</div>
-          <div class="element">Eu</div>
-          <div class="element">Gd</div>
-          <div class="element">Tb</div>
-          <div class="element">Dy</div>
-          <div class="element">Ho</div>
-          <div class="element">Er</div>
-          <div class="element">Tm</div>
-          <div class="element">Yb</div>
-          <div class="element">Lu</div>
-        </div>
-        <div class="row">
-          <div class="element">Th</div>
-          <div class="element">Pa</div>
-          <div class="element">U</div>
-          <div class="element">Np</div>
-          <div class="element">Pu</div>
-          <div class="element">Am</div>
-          <div class="element">Cm</div>
-          <div class="element">Bk</div>
-          <div class="element">Cf</div>
-          <div class="element">Es</div>
-          <div class="element">Fm</div>
-          <div class="element">Md</div>
-          <div class="element">No</div>
-          <div class="element">Lr</div>
-        </div>
-      </div>-->
+      </div>
     </div>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
