@@ -179,3 +179,8 @@ document.getElementById("sbm").onclick = function (event) {
     document.getElementById("result").innerHTML = "Wrong input!";
   }
 };
+
+// INteractive periodic table
+const elements = document.querySelectorAll(".element");
+
+function eleClicked(ind) {}
