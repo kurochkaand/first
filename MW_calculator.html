@@ -27,6 +27,12 @@
         width: 40px;
         height: 40px;
       }
+      .numbers {
+        display: grid;
+        grid-template-columns: repeat(12, auto);
+        width: 480px;
+        margin-left: 120px;
+      }
       .keyboard {
         display: grid;
         grid-template-columns: repeat(18, auto);
@@ -151,14 +157,32 @@
         <input id="formula" />
         <button id="sbm">Calculate mass</button>
       </div>
-
-      <div id="result" style="border: 2px solid black; height: 30px"></div>
+      <br />
+      <label for="result">Molecular mass</label>
+      <input id="result" readonly />
+      <input
+        disabled
+        placeholder="g/mol"
+        style="border: 0px; background-color: rgba(256, 256, 256, 0)"
+      />
       <hr />
     </div>
     <div class="container">
-      <!--      <img src="Periodic table.png" alt="Periodic table" width="600" />-->
-      <hr />
       <div class="ptable-container">
+        <div class="numbers">
+          <div index="201" class="element">0</div>
+          <div index="202" class="element">1</div>
+          <div index="203" class="element">2</div>
+          <div index="204" class="element">3</div>
+          <div index="205" class="element">4</div>
+          <div index="206" class="element">5</div>
+          <div index="207" class="element">6</div>
+          <div index="208" class="element">7</div>
+          <div index="209" class="element">8</div>
+          <div index="2010" class="element">9</div>
+          <div index="2011" class="element">(</div>
+          <div index="2012" class="element">)</div>
+        </div>
         <div class="keyboard">
           <div index="1" class="element">H</div>
           <div class="empty"></div>
@@ -322,7 +346,7 @@
         </div>
       </div>
     </div>
-
+    <hr />
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="MW_calcul.js"></script>
   </body>
