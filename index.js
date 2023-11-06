@@ -3,20 +3,29 @@ document.getElementById("conc").onclick = function (event) {
   let ab = document.getElementById("ab").value;
   let ec = document.getElementById("ec").value;
   let pl = document.getElementById("pl").value;
-  let concentration1 = document.getElementById("concentration1");
+  let concentration1 = document.getElementById("concentration1").value;
   let c1_unit = document.getElementById("c1_unit").value;
-  if (c1_unit == "nM") {
-    let mult = 1e9;
-  } else if (c1_unit == "μM") {
-    let mult = 1e6;
-  } else if (c1_unit == "mM") {
-    let mult = 1e3;
+  let mult = -2;
+  if (c1_unit === "nM") {
+    mult = 1e9;
+  } else if (c1_unit === "μM") {
+    mult = 1e6;
+  } else if (c1_unit === "mM") {
+    mult = 1e3;
   }
 
-  if ("" == "") {
-    let result1 = (ab / ec) * pl * mult;
-    result1 = 1;
-    document.getElementById("concentration1").value = result1.toFixed(3);
+  if (ab === "") {
+    ab = (ec * concentration1 * pl) / mult;
+    document.getElementById("ab").value = ab;
+  } else if (ec === "") {
+    ec = (ab * pl * mult) / concentration1;
+    document.getElementById("ec").value = ec;
+  } else if (pl === "") {
+    pl = (ab * mult) / (concentration1 * ec);
+    document.getElementById("pl").value = pl;
+  } else {
+    concentration1 = (ab * pl * mult) / ec;
+    document.getElementById("concentration1").value = concentration1;
   }
 };
 // Reset button of the first calculator
