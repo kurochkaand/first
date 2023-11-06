@@ -3,16 +3,21 @@ document.getElementById("conc").onclick = function (event) {
   let ab = document.getElementById("ab").value;
   let ec = document.getElementById("ec").value;
   let pl = document.getElementById("pl").value;
-  let result1 = (ab / ec) * pl;
+  let concentration1 = document.getElementById("concentration1");
   let c1_unit = document.getElementById("c1_unit").value;
   if (c1_unit == "nM") {
-    result1 *= 1e9;
+    let mult = 1e9;
   } else if (c1_unit == "μM") {
-    result1 *= 1e6;
+    let mult = 1e6;
   } else if (c1_unit == "mM") {
-    result1 *= 1e3;
+    let mult = 1e3;
   }
-  document.getElementById("concentration1").value = result1.toFixed(3);
+
+  if ("" == "") {
+    let result1 = (ab / ec) * pl * mult;
+    result1 = 1;
+    document.getElementById("concentration1").value = result1.toFixed(3);
+  }
 };
 // Reset button of the first calculator
 document.getElementById("reset1").onclick = function (event) {

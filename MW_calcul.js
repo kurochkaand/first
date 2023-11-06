@@ -131,6 +131,7 @@ function recognizer(formula) {
   //  document.getElementById("result").innerHTML += arr;
   return arr;
 }
+//B(OiPr)3
 
 function mass_counter(arr) {
   let ele = "";
