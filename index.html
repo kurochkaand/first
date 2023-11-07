@@ -9,10 +9,7 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <nav
-      class="navbar navbar-expand-md navbar-dark bg-dark"
-      aria-label="Fourth navbar example"
-    >
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">BioPhysics tools</a>
         <button
@@ -30,71 +27,39 @@
         <div class="collapse navbar-collapse" id="navbarsExample04">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="Table.html"
-                >Amino acids</a
-              >
+              <a class="nav-link" target="_blank" href="Table.html">Amino acids</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="MD_tools.html"
-                >MD tools</a
-              >
+              <a class="nav-link" target="_blank" href="MD_tools.html">MD tools</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="MW_calculator.html"
-                >Molecular mass</a
-              >
+              <a class="nav-link" target="_blank" href="MW_calculator.html">Molecular mass</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="index.html#feedback_1"
-                >Feedback</a
-              >
+              <a class="nav-link" target="_blank" href="index.html#feedback_1">Feedback</a>
             </li>
             <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="dropdown04"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false"
                 >Calculators</a
               >
               <ul class="dropdown-menu" aria-labelledby="dropdown04">
                 <li>
-                  <a class="dropdown-item" target="_blank" href="index.html"
-                    >Beer-Lambert calculator</a
-                  >
+                  <a class="dropdown-item" target="_blank" href="index.html">Beer-Lambert calculator</a>
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item"
-                    target="_blank"
-                    href="index.html#second_half"
-                    >Concentration calculator</a
-                  >
+                  <a class="dropdown-item" target="_blank" href="index.html#second_half">Concentration calculator</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" target="_blank" href="MD_tools.html"
-                    >Water molecules</a
-                  >
+                  <a class="dropdown-item" target="_blank" href="MD_tools.html">Water molecules</a>
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item"
-                    target="_blank"
-                    href="MW_calculator.html"
-                    >Molecular mass</a
-                  >
+                  <a class="dropdown-item" target="_blank" href="MW_calculator.html">Molecular mass</a>
                 </li>
               </ul>
             </li>
           </ul>
           <form>
-            <input
-              class="form-control"
-              type="text"
-              placeholder="Search not implemented"
-              aria-label="Search"
-            />
+            <input class="form-control" type="text" placeholder="Search not implemented" aria-label="Search" />
           </form>
         </div>
       </div>
@@ -107,8 +72,7 @@
         <div class="col-12 text-center"><h2>Beer-Lambert calculator</h2></div>
       </div>
       <div class="row">
-        <div class="col-0 col-md-3"></div>
-        <div class="col-4 col-md-3"><h5>Absorption</h5></div>
+        <div class="offset-md-3 col-4 col-md-3"><h5>Absorption</h5></div>
         <div class="col-4 col-md-2">
           <input type="number" id="ab" value="0." class="form-control" />
         </div>
@@ -119,8 +83,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-0 col-md-3"></div>
-        <div class="col-4 col-md-3"><h5>Extinction coefficient</h5></div>
+        <div class="offset-md-3 col-4 col-md-3"><h5>Extinction coefficient</h5></div>
         <div class="col-4 col-md-2">
           <input type="number" id="ec" class="form-control" />
         </div>
@@ -131,8 +94,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-0 col-md-3"></div>
-        <div class="col-4 col-md-3"><h5>Path length</h5></div>
+        <div class="offset-md-3 col-4 col-md-3"><h5>Path length</h5></div>
         <div class="col-4 col-md-2">
           <input type="number" id="pl" value="1" class="form-control" />
         </div>
@@ -143,8 +105,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-0 col-md-3"></div>
-        <div class="col-4 col-md-3"><h5>Concentration</h5></div>
+        <div class="offset-md-3 col-4 col-md-3"><h5>Concentration</h5></div>
 
         <div class="col-4 col-md-2">
           <input type="number" id="concentration1" class="form-control" />
@@ -217,15 +178,7 @@
       <div class="row">
         <label class="col-8 col-md-4"><h5>Precision</h5></label>
         <div class="col-8 col-md-4">
-          <input
-            type="range"
-            id="prec_2"
-            min="0"
-            max="10"
-            step="1"
-            value="3"
-            class="form-range"
-          />
+          <input type="range" id="prec_2" min="0" max="10" step="1" value="3" class="form-range" />
         </div>
       </div>
       <div class="row gy-1 align-items-center">
@@ -265,33 +218,15 @@
           action="https://worker-snowy-poetry-00ce.kurochka-and.workers.dev/"
         >
           <div class="col">
-            <input
-              type="radio"
-              name="stars"
-              value="1"
-              id="one"
-              class="form-check-input"
-            />
+            <input type="radio" name="stars" value="1" id="one" class="form-check-input" />
             <label class="form-check-label"><b>✩</b></label>
           </div>
           <div class="col">
-            <input
-              type="radio"
-              name="stars"
-              value="3"
-              id="three"
-              class="form-check-input"
-            />
+            <input type="radio" name="stars" value="3" id="three" class="form-check-input" />
             <label class="form-check-label"><b>✩✩✩</b></label>
           </div>
           <div class="col">
-            <input
-              type="radio"
-              name="stars"
-              value="5"
-              id="five"
-              class="form-check-input"
-            />
+            <input type="radio" name="stars" value="5" id="five" class="form-check-input" />
             <label class="form-check-label"><b>✩✩✩✩✩</b></label>
           </div>
           <div class="col">
