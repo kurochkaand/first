@@ -74,7 +74,7 @@
       <div class="row">
         <div class="offset-md-3 col-4 col-md-3"><h5>Absorption</h5></div>
         <div class="col-4 col-md-2">
-          <input type="number" id="ab" value="0." class="form-control" />
+          <input type="number" value="0.0" id="ab" class="form-control" />
         </div>
         <div class="col-2 col-md-2">
           <select class="select-disabled" disabled>
@@ -131,18 +131,16 @@
     <br />
     <!-- Concentration calculator -->
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <h2 id="second_half">Concentration calculator</h2>
-        </div>
-      </div>
       <hr />
       <div class="row">
-        <div class="col-8 col-md-4"><h5>Mass</h5></div>
-        <div class="col-8 col-md-4">
+        <div class="col-12 text-center"><h2>Concentration calculator</h2></div>
+      </div>
+      <div class="row">
+        <div class="offset-md-3 col-4 col-md-3"><h5>Mass</h5></div>
+        <div class="col-4 col-md-2">
           <input type="number" id="mass" class="form-control" />
         </div>
-        <div class="col-8 col-md-3">
+        <div class="col-4 col-sm-3 col-md-2">
           <select id="m_unit" class="form-select">
             <option selected="selected">mg</option>
             <option>g</option>
@@ -151,11 +149,11 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-8 col-md-4"><h5>Volume</h5></div>
-        <div class="col-8 col-md-4">
+        <div class="offset-md-3 col-4 col-md-3"><h5>Volume</h5></div>
+        <div class="col-4 col-md-2">
           <input type="number" id="vol" class="form-control" />
         </div>
-        <div class="col-8 col-md-3">
+        <div class="col-4 col-sm-3 col-md-2">
           <select id="v_unit" class="form-select">
             <option>μL</option>
             <option selected="selected">mL</option>
@@ -164,11 +162,11 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-8 col-md-4"><h5>Molecular weight</h5></div>
-        <div class="col-8 col-md-4">
+        <div class="offset-md-3 col-4 col-md-3"><h5>Molecular weight</h5></div>
+        <div class="col-4 col-md-2">
           <input type="number" id="mw" class="form-control" />
         </div>
-        <div class="col-8 col-md-3">
+        <div class="col-4 col-sm-3 col-md-2">
           <select id="mw_unit" class="form-select">
             <option selected="selected">Da</option>
             <option>kDa</option>
@@ -176,20 +174,17 @@
         </div>
       </div>
       <div class="row">
-        <label class="col-8 col-md-4"><h5>Precision</h5></label>
-        <div class="col-8 col-md-4">
+        <label class="offset-md-3 col-4 col-md-3"><h5>Precision</h5></label>
+        <div class="col-4 col-md-2">
           <input type="range" id="prec_2" min="0" max="10" step="1" value="3" class="form-range" />
         </div>
       </div>
-      <div class="row gy-1 align-items-center">
-        <div class="col-md-2"><h5>Concentration</h5></div>
-        <div class="col-4 col-md-2 text-center">
-          <button id="calculate2" class="btn btn-success">Calculate</button>
+      <div class="row align-items-center">
+        <div class="offset-md-3 col-4 col-md-3"><h5>Concentration</h5></div>
+        <div class="col-4 col-md-2">
+          <input type="number" id="concentration2" class="form-control" />
         </div>
-        <div class="col-8 col-md-4">
-          <div id="result2" class="box"></div>
-        </div>
-        <div class="col-9 col-md-2">
+        <div class="col-4 col-sm-3 col-md-2">
           <select id="c2_unit" class="form-select">
             <option>nM</option>
             <option>μM</option>
@@ -197,8 +192,14 @@
             <option>M</option>
           </select>
         </div>
-        <div class="col-3 col-md-1 text-center">
-          <button id="reset2" class="btn btn-danger">Reset</button>
+        <div class="row">
+          <div class="col-4 col-md-6"></div>
+          <div class="col-4 col-md-2 text-center">
+            <button id="calculate2" class="btn btn-success">Calculate</button>
+          </div>
+          <div class="col-4 col-sm-3 col-md-2 text-center">
+            <button id="reset2" class="btn btn-danger">Reset</button>
+          </div>
         </div>
       </div>
     </div>
