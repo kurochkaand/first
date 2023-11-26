@@ -107,7 +107,7 @@ document.getElementById("calculate2").onclick = function (event) {
     document.getElementById("mw").style.backgroundColor = "rgba(106, 90, 205, 0.5)";
   } else {
     con2 = (mass * mass_mult) / (vol * vol_mult * mw * mw_mult * con_mult2);
-    document.getElementById("concentration2").value = con2.toFixed(prec_2);
+    document.getElementById("concentration2").value = con2;
     document.getElementById("concentration2").style.backgroundColor = "rgba(106, 90, 205, 0.5)";
   }
 };
