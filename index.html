@@ -112,7 +112,7 @@
       <div class="row">
         <div class="offset-md-3 col-4 col-md-3"><h5>Absorption</h5></div>
         <div class="col-4 col-md-2">
-          <input type="number" value="0.0" id="ab" class="form-control" />
+          <input type="number" value="0.0" id="ab" class="form-control" min="0" step="0.1" />
         </div>
         <div class="col-2 col-md-2">
           <select class="select-disabled" disabled>
@@ -125,7 +125,15 @@
           <h5>Extinction coefficient</h5>
         </div>
         <div class="col-4 col-md-2">
-          <input type="number" id="ec" class="form-control" />
+          <input
+            type="number"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            id="ec"
+            class="form-control"
+            min="0"
+            maxlength="10"
+            step="1000"
+          />
         </div>
         <div class="col-2 col-md-2">
           <select class="select-disabled" disabled>
@@ -136,7 +144,7 @@
       <div class="row">
         <div class="offset-md-3 col-4 col-md-3"><h5>Path length</h5></div>
         <div class="col-4 col-md-2">
-          <input type="number" id="pl" value="1" class="form-control" />
+          <input type="number" id="pl" value="1" class="form-control" min="0" step="0.1" />
         </div>
         <div class="col-2 col-md-2">
           <select class="select-disabled" disabled>
@@ -148,7 +156,7 @@
         <div class="offset-md-3 col-4 col-md-3"><h5>Concentration</h5></div>
 
         <div class="col-4 col-md-2">
-          <input type="number" id="concentration1" class="form-control" />
+          <input type="number" id="concentration1" class="form-control" min="0" />
         </div>
         <div class="col-4 col-sm-3 col-md-2">
           <select id="c1_unit" class="form-select">
@@ -178,7 +186,7 @@
       <div class="row">
         <div class="offset-md-3 col-4 col-md-3"><h5>Mass</h5></div>
         <div class="col-4 col-md-2">
-          <input type="number" id="mass" class="form-control" />
+          <input type="number" id="mass" class="form-control" min="0" />
         </div>
         <div class="col-4 col-sm-3 col-md-2">
           <select id="m_unit" class="form-select">
@@ -191,7 +199,7 @@
       <div class="row">
         <div class="offset-md-3 col-4 col-md-3"><h5>Volume</h5></div>
         <div class="col-4 col-md-2">
-          <input type="number" id="vol" class="form-control" />
+          <input type="number" id="vol" class="form-control" min="0" />
         </div>
         <div class="col-4 col-sm-3 col-md-2">
           <select id="v_unit" class="form-select">
@@ -204,7 +212,7 @@
       <div class="row">
         <div class="offset-md-3 col-4 col-md-3"><h5>Molecular weight</h5></div>
         <div class="col-4 col-md-2">
-          <input type="number" id="mw" class="form-control" />
+          <input type="number" id="mw" class="form-control" min="0" />
         </div>
         <div class="col-4 col-sm-3 col-md-2">
           <select id="mw_unit" class="form-select">
@@ -230,7 +238,7 @@
       <div class="row align-items-center">
         <div class="offset-md-3 col-4 col-md-3"><h5>Concentration</h5></div>
         <div class="col-4 col-md-2">
-          <input type="number" id="concentration2" class="form-control" />
+          <input type="number" id="concentration2" class="form-control" min="0" />
         </div>
         <div class="col-4 col-sm-3 col-md-2">
           <select id="c2_unit" class="form-select">
