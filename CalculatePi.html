@@ -10,17 +10,104 @@
       id="myCanvas"
       width="200"
       height="200"
-      style="border: 1px solid gray"
+      style="border: 1px solid rgb(247, 93, 93)"
     ></canvas>
+    <table id="myTable">
+      <tr>
+        <td>Total =</td>
+        <td id="inSquare">0</td>
+      </tr>
+      <tr>
+        <td>Circled =</td>
+        <td id="inCircle">0</td>
+      </tr>
+      <tr>
+        <td>π ≈</td>
+        <td id="ratio"></td>
+      </tr>
+      <tr>
+        <td>Error</td>
+        <td id="error"></td>
+      </tr>
+    </table>
+    <input
+      type="number"
+      id="shotsInClick"
+      value="5"
+      min="1"
+      max="1000"
+      onkeyup="if(value>1000) value=1000;"
+    />
+    <button id="random_shot" onclick="addRandomShot()">Random shots</button>
 
     <script>
+      let inCircle = 0;
+      let inSquare = 0;
       const canvas = document.getElementById("myCanvas");
       const contx = canvas.getContext("2d");
-      contx.beginPath();
-      contx.arc(100, 100, 100, 0, 2 * Math.PI);
-      contx.lineWidth = 1;
-      contx.strokeStyle = "green";
-      contx.stroke();
+      const shotsInClick = document.getElementById("shotsInClick");
+
+      function main() {
+        contx.beginPath();
+        contx.arc(100, 100, 100, 0, 2 * Math.PI);
+        contx.lineWidth = 1;
+        contx.strokeStyle = "green";
+        contx.stroke();
+      }
+
+      function addRandomShot() {
+        for (let i = 0; i < shotsInClick.value; i++) {
+          let place = genRandomCoord();
+          let color = updateRatio(place);
+          drawShot(place, color);
+        }
+      }
+
+      function genRandomCoord() {
+        const coordX = Math.random() * 200;
+        const coordY = Math.random() * 200;
+        return { shotX: coordX, shotY: coordY };
+      }
+
+      function updateRatio(place) {
+        let shotcolor = "black";
+        let square = document.getElementById("inSquare");
+        const circle = document.getElementById("inCircle");
+        const result = document.getElementById("ratio");
+        const error = document.getElementById("error");
+        const distance = Math.sqrt(
+          (100 - place.shotX) ** 2 + (100 - place.shotY) ** 2
+        );
+        if (distance < 100) {
+          inCircle += 1;
+          shotcolor = "green";
+        } else {
+          shotcolor = "red";
+        }
+        inSquare += 1;
+        circle.innerHTML = inCircle;
+        square.innerHTML = inSquare;
+        result.innerHTML = +((4 * inCircle) / inSquare).toFixed(5);
+        error.innerHTML =
+          +((((4 * inCircle) / inSquare - Math.PI) * 100) / Math.PI).toFixed(
+            5
+          ) + " %";
+        return shotcolor;
+      }
+
+      function drawShot(place, color) {
+        console.log(place);
+        contx.beginPath();
+        contx.arc(place.shotX, place.shotY, 4, 0, 2 * Math.PI);
+        contx.moveTo(place.shotX - 4, place.shotY - 4);
+        contx.lineTo(place.shotX + 4, place.shotY + 4);
+        contx.moveTo(place.shotX + 4, place.shotY - 4);
+        contx.lineTo(place.shotX - 4, place.shotY + 4);
+        contx.strokeStyle = color;
+        contx.stroke();
+      }
+
+      main();
     </script>
   </body>
 </html>
